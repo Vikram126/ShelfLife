@@ -49,6 +49,15 @@ Always use npm run test, never watch mode when verifying or finishing tasks.
 - All input is validated on the server, even if the form validates too.
 - Use the established auth library's session handling. Never write
   custom cryptography or hand-rolled sessions.
+- The app must refuse to start if a required secret is missing or still a placeholder.
+- Required Environment Variables:
+  - DATABASE_URL: SQLite file connection string.
+  - NEXTAUTH_URL: Canonical URL of the application.
+  - NEXTAUTH_SECRET: Secret used to encrypt session cookies and tokens.
+  - GOOGLE_CLIENT_ID: Google OAuth client ID.
+  - GOOGLE_CLIENT_SECRET: Google OAuth client secret.
+  - GITHUB_CLIENT_ID: GitHub OAuth client ID.
+  - GITHUB_CLIENT_SECRET: GitHub OAuth client secret.
 
 ## Hard rules: accounts
 - A signed-in user without a username can reach nothing except the

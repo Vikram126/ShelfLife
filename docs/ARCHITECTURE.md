@@ -75,4 +75,5 @@ All routes except sign-in require a signed-in user with a username.
 - Migration safety: must not use `--accept-data-loss`.
 - Prisma 7 configuration: Prisma 7 specifies datasource URLs in `prisma.config.ts` rather than `schema.prisma`; test setup must account for how Prisma 7 and Prisma Client resolve this URL.
 - Serial execution: tests accessing the database must run serially (`--runInBand`) to prevent SQLite file lock conflicts and state collisions.
+- Note: .env.test is currently ignored by .gitignore. Task 4 must decide exactly how the test database URL is provided (e.g., via environment overrides, test setup scripts, or a different config).
 

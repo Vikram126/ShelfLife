@@ -8,7 +8,7 @@ that can be checked, and a commit.
       a blank home page. Fill the real commands and layout into AGENTS.md.
 - [x] 2. Set up testing, linting, and type checking. Done when: one
       trivial test passes, and all three commands run cleanly.
-- [ ] 3. Add .gitignore rules and .env.example. Done when: a real .env
+- [x] 3. Add .gitignore rules and .env.example. Done when: a real .env
       file is ignored by Git and the example file lists variable names
       with fake values.
 

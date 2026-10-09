@@ -13,3 +13,4 @@ One line per lasting decision: what we chose and why. Newest at the bottom.
 - Reserved usernames list defined (admin, settings, login, etc.) to prevent route collisions and impersonation.
 -Prisma pinned to stable 7.x; avoid release candidates
 - Test runner: Jest with next/jest for native SWC TypeScript transpilation and path alias resolution.
+- NEXTAUTH_* environment variable names are explicitly chosen for NextAuth v4 (names change in Auth.js v5).
