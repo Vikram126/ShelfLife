@@ -1,3 +1,12 @@
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
 # ShelfLife
 
 A multi-user reading tracker website. Users sign in with Google or GitHub,
@@ -9,22 +18,22 @@ is private. Full requirements: docs/PRD.md. Read it before starting any task.
 - SQLite for the database (single local file)
 - Tailwind CSS for styling, no UI component library
 - Social sign-in only (Google, GitHub). No passwords are stored.
-- (Exact versions and the auth library: to be filled in after scaffolding)
-
+- NextAuth.js (v4.24.15) for authentication
+- Prisma (v8.0.0-rc.22) for database tooling
+- Next.js (v16.4.0)
 ## Commands
-- Start dev server: TODO (fill in after task 1)
-- Run tests: TODO
-- Lint/format: TODO
-- Type check: TODO
+- Start dev server: `npm run dev`
+- Run tests: `npm run test` (not set up until Task 2)
+- Lint/format: `npm run lint`
+- Type check: `npm run typecheck`
 Always run tests, lint, and type check before saying a task is done.
 
 ## Project layout
-- Pages and routes: the app folder
-- Business logic (validation, stats, username rules): a logic folder,
+- Pages and routes: the `src/app` folder
+- Business logic (validation, stats, username rules): a `src/logic` folder,
   with no database or UI code inside it
-- Database access: a data-layer folder only
-- Tests: next to the logic they cover, or in a tests folder
-(Update this section after scaffolding so it matches reality.)
+- Database access: a `src/data-layer` folder only
+- Tests: next to the logic they cover, or in a `src/tests` folder
 
 ## Hard rules: security and privacy
 - Every database query for books MUST be scoped to the signed-in user.

@@ -4,7 +4,7 @@ Work one task at a time, top to bottom. Each task ends with something
 that can be checked, and a commit.
 
 ## Foundation
-- [ ] 1. Scaffold the project. Done when: the dev server runs and shows
+- [x] 1. Scaffold the project. Done when: the dev server runs and shows
       a blank home page. Fill the real commands and layout into AGENTS.md.
 - [ ] 2. Set up testing, linting, and type checking. Done when: one
       trivial test passes, and all three commands run cleanly.
