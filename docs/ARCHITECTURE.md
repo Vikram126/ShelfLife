@@ -68,3 +68,11 @@ All routes except sign-in require a signed-in user with a username.
 - Analytics page reading from the same Book data.
 - Account linking between providers.
 - Optional start date and genre fields on Book.
+
+## Testing and Database Isolation (Task 4 setup requirements)
+- Throwaway test database: must use an isolated SQLite test database file (never the development or production database).
+- URL safety check: database setup scripts must abort with an error unless the database URL clearly points at a test file.
+- Migration safety: must not use `--accept-data-loss`.
+- Prisma 7 configuration: Prisma 7 specifies datasource URLs in `prisma.config.ts` rather than `schema.prisma`; test setup must account for how Prisma 7 and Prisma Client resolve this URL.
+- Serial execution: tests accessing the database must run serially (`--runInBand`) to prevent SQLite file lock conflicts and state collisions.
+

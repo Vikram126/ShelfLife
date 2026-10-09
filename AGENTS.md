@@ -19,14 +19,16 @@ is private. Full requirements: docs/PRD.md. Read it before starting any task.
 - Tailwind CSS for styling, no UI component library
 - Social sign-in only (Google, GitHub). No passwords are stored.
 - NextAuth.js (v4.24.15) for authentication
-- Prisma (v8.0.0-rc.22) for database tooling
+- Prisma (v7.10.0) for database tooling
 - Next.js (v16.4.0)
 ## Commands
 - Start dev server: `npm run dev`
-- Run tests: `npm run test` (not set up until Task 2)
+- Run tests: `npm run test`
+- Test in watch mode: `npm run test:watch`
 - Lint/format: `npm run lint`
 - Type check: `npm run typecheck`
 Always run tests, lint, and type check before saying a task is done.
+Always use npm run test, never watch mode when verifying or finishing tasks.
 
 ## Project layout
 - Pages and routes: the `src/app` folder

@@ -12,3 +12,4 @@ One line per lasting decision: what we chose and why. Newest at the bottom.
 - Package manager: NPM chosen for dependency management.
 - Reserved usernames list defined (admin, settings, login, etc.) to prevent route collisions and impersonation.
 -Prisma pinned to stable 7.x; avoid release candidates
+- Test runner: Jest with next/jest for native SWC TypeScript transpilation and path alias resolution.
